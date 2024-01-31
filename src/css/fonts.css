@@ -1,0 +1,5 @@
+@font-face {
+    font-family: "RocaThin";
+    src: url("../assets/webFonts/RocaThin/font.woff2") format("woff2"),
+        url("../assets/webFonts/RocaThin/font.woff") format("woff");
+}

@@ -1,0 +1,15 @@
+.header,
+.footer,
+.introduction__list li,
+.introduction__links > *,
+.introduction__text {
+    opacity: 0;
+}
+
+.introduction__text {
+    transform: translateX(-100%);
+}
+
+.introduction__links > * {
+    transform: translateY(-50px);
+}
