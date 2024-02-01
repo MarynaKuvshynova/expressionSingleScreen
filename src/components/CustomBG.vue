@@ -28,10 +28,8 @@ export default {
 <style scope>
 .custom-bg {
     pointer-events: none;
-    position: fixed;
-    z-index: 0;
-    top: 0;
-    right: 0;
+    display: none;
+    position: absolute;
     z-index: -1;
 }
 
@@ -42,7 +40,10 @@ export default {
 
 @media (min-width: 1024px) {
     .custom-bg {
-        width: 80%;
+        z-index: 0;
+        top: 0;
+        right: 0;
+        display: block;
     }
 }
 </style>

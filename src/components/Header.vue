@@ -1,16 +1,12 @@
 <template>
     <header class="header">
         <div class="container">
-            <h1>
-                <a href="/">
-                    <img src="/logo.svg" alt="expression digital" />
-                </a>
-            </h1>
+            <slot />
         </div>
     </header>
 </template>
 
-<style scoped>
+<style>
 .header {
     padding: 40px 0;
     line-height: 1;

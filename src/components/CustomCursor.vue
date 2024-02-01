@@ -23,7 +23,10 @@ export default {
             ) {
                 this.$refs.customCursor.classList.add(this.activeClassSize);
 
-                if (e.target.classList.contains("btn")) {
+                if (
+                    e.target.classList.contains("btn") ||
+                    e.target.classList.contains("link")
+                ) {
                     this.$refs.customCursor.classList.add(
                         this.activeClassColor
                     );
@@ -45,12 +48,12 @@ export default {
     mounted() {
         this.$nextTick(function () {
             this.xSetter = gsap.quickTo(this.$refs.customCursor, "x", {
-                duration: 0.6,
+                duration: 0.15,
                 ease: "power3",
             });
 
             this.ySetter = gsap.quickTo(this.$refs.customCursor, "y", {
-                duration: 0.6,
+                duration: 0.15,
                 ease: "power3",
             });
 
@@ -78,7 +81,7 @@ export default {
     left: 0;
     transform: translate(-10px, -10px);
     margin: -5px 0 0 -5px;
-    transition: all 0.6s linear;
+    transition: all 0.15s linear;
     display: none;
 }
 

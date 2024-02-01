@@ -7,7 +7,7 @@
 }
 
 .introduction__text {
-    transform: translateX(-100%);
+    transform: translateX(-50px);
 }
 
 .introduction__links > * {
