@@ -63,12 +63,19 @@
 </template>
 
 <script>
+import { defineAsyncComponent } from "vue";
 import Header from "./components/Header.vue";
 import Footer from "./components/Footer.vue";
 import Introduction from "./components/Introduction.vue";
-import Skip from "./components/Skip.vue";
-import CustomCursor from "./components/CustomCursor.vue";
-import CustomBG from "./components/CustomBG.vue";
+// import Skip from "./components/Skip.vue";
+// import CustomCursor from "./components/CustomCursor.vue";
+// import CustomBG from "./components/CustomBG.vue";
+// const Header = () => import("./components/Header");
+// const Footer = () => import("./components/Footer");
+// const Introduction = () => import("./components/Introduction");
+// const Skip = () => import("./components/Skip");
+// const CustomCursor = () => import("./components/CustomCursor");
+// const CustomBG = () => import("./components/CustomBG");
 
 import gsap from "gsap";
 
@@ -80,9 +87,13 @@ export default {
         Header,
         Footer,
         Introduction,
-        CustomCursor,
-        CustomBG,
-        Skip,
+        Skip: defineAsyncComponent(() => import("./components/Skip.vue")),
+        CustomCursor: defineAsyncComponent(() =>
+            import("./components/CustomCursor.vue")
+        ),
+        CustomBG: defineAsyncComponent(() =>
+            import("./components/CustomBG.vue")
+        ),
     },
     methods: {
         animationFunction() {
