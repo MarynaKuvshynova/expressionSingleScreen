@@ -9,6 +9,7 @@ export default {
     data() {
         return {
             parent: null,
+            currentEl: null,
             xSetter: null,
             ySetter: null,
             activeClassSize: "custom-cursor--big",
@@ -17,22 +18,21 @@ export default {
     },
     methods: {
         moveCursor(e) {
+            const el = e.target;
             if (
-                e.target.tagName.toLowerCase() === "a" ||
-                e.target.tagName.toLowerCase() === "button"
+                el.tagName.toLowerCase() === "a" ||
+                el.tagName.toLowerCase() === "button"
             ) {
-                this.$refs.customCursor.classList.add(this.activeClassSize);
+                this.currentEl.classList.add(this.activeClassSize);
 
                 if (
-                    e.target.classList.contains("btn") ||
-                    e.target.classList.contains("link")
+                    el.classList.contains("btn") ||
+                    el.classList.contains("link")
                 ) {
-                    this.$refs.customCursor.classList.add(
-                        this.activeClassColor
-                    );
+                    this.currentEl.classList.add(this.activeClassColor);
                 }
             } else {
-                this.$refs.customCursor.classList.remove(
+                this.currentEl.classList.remove(
                     this.activeClassSize,
                     this.activeClassColor
                 );
@@ -46,13 +46,14 @@ export default {
         },
     },
     mounted() {
+        this.currentEl = this.$refs.customCursor;
         this.$nextTick(function () {
-            this.xSetter = gsap.quickTo(this.$refs.customCursor, "x", {
+            this.xSetter = gsap.quickTo(this.currentEl, "x", {
                 duration: 0.15,
                 ease: "power3",
             });
 
-            this.ySetter = gsap.quickTo(this.$refs.customCursor, "y", {
+            this.ySetter = gsap.quickTo(this.currentEl, "y", {
                 duration: 0.15,
                 ease: "power3",
             });
