@@ -63,10 +63,10 @@
 </template>
 
 <script>
-import Skip from "./components/Skip.vue";
 import Header from "./components/Header.vue";
 import Footer from "./components/Footer.vue";
 import Introduction from "./components/Introduction.vue";
+import Skip from "./components/Skip.vue";
 import CustomCursor from "./components/CustomCursor.vue";
 import CustomBG from "./components/CustomBG.vue";
 
