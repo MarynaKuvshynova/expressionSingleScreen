@@ -3,7 +3,11 @@
     <Header>
         <h1>
             <a href="/">
-                <img src="/logo.svg" alt="expression digital" />
+                <img
+                    src="/logo.svg"
+                    width="244"
+                    height="40"
+                    alt="expression digital" />
             </a>
         </h1>
     </Header>
