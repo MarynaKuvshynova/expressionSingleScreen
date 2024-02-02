@@ -26,24 +26,5 @@ export default {
 </script>
 
 <style scope>
-.custom-bg {
-    pointer-events: none;
-    display: none;
-    position: absolute;
-    z-index: -1;
-}
 
-.custom-bg svg {
-    max-width: 100%;
-    height: auto;
-}
-
-@media (min-width: 1024px) {
-    .custom-bg {
-        z-index: 0;
-        top: 0;
-        right: 0;
-        display: block;
-    }
-}
 </style>
