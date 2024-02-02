@@ -6,13 +6,15 @@
 
 <script>
 export default {
-    data() {
-        return {};
-    },
     methods: {
         scrollToMain($event) {
             $event.stopPropagation();
-            smoother.scrollTo(".main", true, "top top");
+            const element = document.querySelector(".main");
+
+            window.scrollTo({
+                top: element.getBoundingClientRect().top,
+                behavior: "smooth",
+            });
         },
     },
 };
