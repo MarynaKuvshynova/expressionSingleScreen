@@ -1,6 +1,5 @@
 <script>
 import { defineAsyncComponent } from "vue";
-
 import gsap from "gsap";
 
 export default {
