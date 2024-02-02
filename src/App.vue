@@ -1,5 +1,7 @@
 <script>
-import { defineAsyncComponent } from "vue";
+// import { defineAsyncComponent } from "vue";
+import Skip from "./components/Skip.vue";
+import CustomCursor from "./components/CustomCursor.vue";
 
 import gsap from "gsap";
 
@@ -8,10 +10,12 @@ export default {
         return {};
     },
     components: {
-        Skip: defineAsyncComponent(() => import("./components/Skip.vue")),
-        CustomCursor: defineAsyncComponent(() =>
-            import("./components/CustomCursor.vue")
-        ),
+        CustomCursor,
+        Skip,
+        // Skip: defineAsyncComponent(() => import("./components/Skip.vue")),
+        // CustomCursor: defineAsyncComponent(() =>
+        //     import("./components/CustomCursor.vue")
+        // ),
     },
     methods: {
         animationFunction() {
