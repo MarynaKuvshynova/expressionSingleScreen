@@ -189,6 +189,14 @@ ul {
     font-style: normal;
 }
 
+/*main*/
+.main {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+}
+
 /*introduction*/
 .introduction .container {
     display: flex;

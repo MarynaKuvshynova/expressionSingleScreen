@@ -53,13 +53,3 @@ export default {
     },
 };
 </script>
-
-<style scoped>
-.main {
-    display: flex;
-    gap: 60px;
-    flex-direction: column;
-    flex: 1;
-    justify-content: center;
-}
-</style>
